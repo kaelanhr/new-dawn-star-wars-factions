@@ -1,0 +1,24 @@
+﻿l_english:
+ gov_dwv_emp:0 "Imperial Ruling Council"
+ gov_dwv_mega:0 "Megacorporation"
+ gov_dwv_imperial_remnant:0 "Imperial Ruling Council"
+ gov_dwv_pentastar:0 "Chamber of Order"
+ EMPIRE_DESIGN_Imperium:0 "§GThe Imperium§!"
+ EMPIRE_DESIGN_Imperium_desc:0 "The Imperium is a newly founded Galactic Empire consisting of only the finest members of the former Galactic Empire."
+ EMPIRE_DESIGN_SystemsFederation:0 "§GSystems Federation§!"
+ EMPIRE_DESIGN_ImperialRemnant:0 "§GImperial Remnant§!"
+ EMPIRE_DESIGN_ImperialRemnant_desc:0 "The Imperial Remnant is an empire formed from the unified holdings of various Imperial Warlords following the collapse of the Galactic Empire."
+ EMPIRE_DESIGN_SystemsFederation:0 "§GSystems Federation§!"
+ EMPIRE_DESIGN_SystemsFederation_desc:0 "The Systems Federation is a federation of systems which were strong supporters of the Old Republic and begrudgingly joined the Galactic Empire. With the collapse of the Empire, they wish to restore democratic galactic rule."
+ EMPIRE_DESIGN_ImperialDriveYards:0 "§GImperial Drive Yards§!"
+ EMPIRE_DESIGN_ImperialDriveYards_desc:0 "Imperial Drive Yards is a major starship manufacturer consisting of high level members of the Imperial Remnant."
+ EMPIRE_DESIGN_PentastarAlignment:0 "§GPentastar Alignment§!"
+ EMPIRE_DESIGN_PentastarAlignment_desc:0 "The Pentastar Alignment, was an Imperial Remnant faction which became a corporate conglomerate that politically administered numerous sectors. They were largely excluded from wider galactic conflicts."
+
+ ####################################
+ # Rulers / Heirs
+ ####################################
+ RT_DIRECTOR:0 "Director"
+ RT_GRAND_MOFF:0 "Grand Moff"
+ RT_GRAND_ADMIRAL:0 "Grand Admiral"
+ RT_SUPREME_COMMANDER:0 "Supreme Commander"

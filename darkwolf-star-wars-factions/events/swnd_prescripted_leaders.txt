@@ -1,0 +1,171 @@
+##################################
+#                                #
+#    SWND Prescripted Leaders    #
+#                                #
+##################################
+namespace = swnd_prescripted_leaders
+country_event = {
+	id = swnd_prescripted_leaders.1
+	is_triggered_only = yes
+	fire_only_once = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = { has_global_flag = canon_map_spawned }
+
+			######## Galactic Empire Prescripted Leaders
+			event_target:galactic_empire = {
+				# Palpatine
+				ruler = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				create_ruler_palpatine = yes
+				assign_leader = event_target:ruler_palpatine
+				# Darth Vader
+				create_admiral_darth_vader = yes
+				# Tarkin
+				create_clone_wars_admiral_tarkin =yes
+				# Yularen
+				create_clone_wars_admiral_yularen = yes
+				# Pellaeon
+				create_clone_wars_admiral_pellaeon = yes
+			}
+			######## Senate Loyalist Prescripted Leaders
+			event_target:senate_loyalists = {
+				ruler = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				create_ruler_mon_mothma = yes
+				assign_leader = event_target:ruler_mon_mothma
+			}
+
+			######## Kingdom of Alderaan Prescripted Leaders
+			event_target:kingdom_of_alderaan = {
+				ruler = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				create_ruler_bail_organa = yes
+				assign_leader = event_target:ruler_bail_organa
+			}
+
+			######## Mandalorian Prescripted Leaders
+			event_target:mandalorian_clans = {
+				ruler = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				create_ruler_bo_katan = yes
+				assign_leader = event_target:ruler_bo_katan_kryze
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = non_canon_map_spawned }
+
+			if = {
+				limit = { NOT = { has_country_flag = imperial_remnant } }
+				######## Galactic Empire Prescripted Leaders
+				event_target:galactic_empire = {
+					# Palpatine
+					ruler = {
+						kill_leader = {
+							show_notification = no
+						}
+					}
+					create_ruler_palpatine = yes
+					assign_leader = event_target:ruler_palpatine
+					# Darth Vader
+					create_admiral_darth_vader = yes
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = imperial_remnant }
+				######## Imperial Remnant Prescripted Leaders
+					create_clone_wars_admiral_pellaeon = yes
+				}
+			}
+
+			######## Senate Loyalist Prescripted Leaders
+			event_target:senate_loyalists = {
+				ruler = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				create_ruler_mon_mothma = yes
+				assign_leader = event_target:ruler_mon_mothma
+			}
+
+			######## Kingdom of Alderaan Prescripted Leaders
+			event_target:kingdom_of_alderaan = {
+				ruler = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				create_ruler_bail_organa = yes
+				assign_leader = event_target:ruler_bail_organa
+			}
+
+			######## Mandalorian Prescripted Leaders
+			event_target:mandalorian_clans = {
+				ruler = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				create_ruler_bo_katan = yes
+				assign_leader = event_target:ruler_bo_katan_kryze
+			}
+		}
+	}
+}
+
+#Leader Revival System - Vader
+country_event = {
+	id = swnd_prescripted_leaders.2
+	is_triggered_only = yes
+	title = swnd_prescripted_leaders.2.name
+	desc = swnd_prescripted_leaders.2.desc
+	picture = GFX_evt_gov_mining_request
+	trigger = {
+		has_country_flag = galactic_empire
+		NOR = {
+			any_owned_leader = {
+				has_leader_flag = darth_vader
+			}
+			has_country_flag = vader_is_dead
+		}
+	}
+	immediate = {
+	}
+	#Revive Vader
+	option = {
+		name = swp_galactic_empire_event.2.a
+		hidden_effect = {
+			create_admiral_darth_vader = yes
+		}
+		allow = {
+			resource_stockpile_compare = {
+				resource = bacta
+				value >= 500
+			}
+		}
+		add_resource = {
+			unity = -250
+			bacta = -500
+			influence = -100
+		}
+	}
+	#Keep him Dead
+	option = {
+		name = swp_galactic_empire_event.2.b
+		set_country_flag = vader_is_dead
+	}
+}
