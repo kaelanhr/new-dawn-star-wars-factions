@@ -1,0 +1,33 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+portraits = {
+	imperial_male_01_grand_admiral = {
+		entity = "portrait_human_male_01_entity"
+		clothes_selector = "thrawn_male_clothes_01"
+		attachment_selector = "humanoid_master_male_hair_01"
+		greeting_sound = "imperial_greeting"
+		character_textures = {
+			"gfx/models/portraits/human/human_male_body_01.dds"
+			"gfx/models/portraits/human/human_male_body_01b.dds"
+			"gfx/models/portraits/human/human_male_body_01c.dds"
+		}
+	}
+	imperial_female_01_admiral = {
+		entity = "portrait_human_female_01_entity"
+		clothes_selector = "imperial_female_clothes_admiral01"
+		attachment_selector = "humanoid_master_female_hair_01"
+		greeting_sound = "imperial_greeting"
+		character_textures = {
+			"gfx/models/portraits/human/human_female_body_01.dds"
+			"gfx/models/portraits/human/human_female_body_01b.dds"
+			"gfx/models/portraits/human/human_female_body_01c.dds"
+		}
+	}
+}
